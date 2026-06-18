@@ -15,7 +15,7 @@ class PostSeeder extends Seeder
     public function run(): void
     {
         $judul = [
-            'Judul post 1'
+            'Judul post 1', 'Judul post 2', 'Judul post 3', 'Judul post 4', 'Judul post 5', 'Judul post 6', 'Judul post 7',
         ];
 
         foreach ($judul as $j) {
