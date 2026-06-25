@@ -18,7 +18,7 @@ class PostSeeder extends Seeder
             'Judul post 1', 'Judul post 2', 'Judul post 3', 'Judul post 4', 'Judul post 5', 'Judul post 6', 'Judul post 7',
         ];
 
-        print_r($judul)
+        print_r($judul);
 
         foreach ($judul as $j) {
             $slug = Str::slug($j);
