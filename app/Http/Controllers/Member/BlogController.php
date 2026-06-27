@@ -168,4 +168,11 @@ class BlogController extends Controller
         return $slug;
     }
 
+    public function dummy()
+    {
+
+        return view('member.blogs.index', compact('data'));
+
+    }
+
 }

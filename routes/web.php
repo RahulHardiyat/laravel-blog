@@ -3,6 +3,11 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+//testing
+Route::get('/test', function () {
+    return view('test');
+});
+
 Route::get('/', [\App\Http\Controllers\Front\HomePageController::class, 'index']);
 
 Route::get('/dashboard', function () {
@@ -32,3 +37,5 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 Route::get('/{slug}', [\App\Http\Controllers\BlogDetailController::class, 'detail'])->name('blog.detail');
+
+
