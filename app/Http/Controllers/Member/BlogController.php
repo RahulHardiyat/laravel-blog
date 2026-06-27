@@ -21,7 +21,8 @@ class BlogController extends Controller
 
         $data = Post::where('user_id', $user->id)->where(function($query) use ($search) {
             if ($search) {
-                $query->where('title', 'like', '%' . $search . '%')->orWhere('content', 'like', '%' . $search . '%');
+                $query->where('title', 'like', '%' . $search . '%')
+                    ->orWhere('content', 'like', '%' . $search . '%');
             }
     } )->orderBy('id', 'desc')->paginate(5)->withQueryString();
 
@@ -171,7 +172,7 @@ class BlogController extends Controller
     public function dummy()
     {
 
-        return view('member.blogs.index', compact('data'));
+//        return view('member.blogs.index', compact('data'));
 
     }
 

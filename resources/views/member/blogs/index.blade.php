@@ -1,8 +1,9 @@
 <x-app-layout>
+    {{--header menu--}}
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="font-semibold text-md-center text-gray-800 leading-tight">
             Pengaturan Blog | <a href="{{ route('member.blogs.create') }}" class=" bg-slate-800
-            rounded-sm text-white p-3 m-3">Tambah Data</a>
+             rounded-md text-white p-2 m-2">Tambah Data</a>
         </h2>
     </x-slot>
 
@@ -14,6 +15,7 @@
         </form>
     </x-slot>
 
+    {{-- main content--}}
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white shadow-sm sm:rounded-lg overflow-x-auto">

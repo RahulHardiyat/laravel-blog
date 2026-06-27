@@ -37,6 +37,7 @@
         </header>
     @endisset
 
+{{--content--}}
 {{ $slot }}
 
 <!-- Footer-->
