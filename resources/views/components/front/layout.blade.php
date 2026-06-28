@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 </head>
 <body>
     @include('components.front.navigation')
@@ -33,7 +33,7 @@
                             @endisset
                             <div>
                                 @isset($pageUser)
-                                    <span class="post-meta"> Posted By <span class="text-amber-600">{{ $pageUser }}</span>, {{ $pageDate  }}</span>
+                                    <span class="post-meta"> Posted By <span class="navbar-text text-info">{{ $pageUser }}</span>, {{ $pageDate  }}</span>
                                 @endisset
                             </div>
 
@@ -69,6 +69,7 @@
                                     </span>
                         </a>
                     </li>
+
                     <li class="list-inline-item">
                         <a href="#!">
                                     <span class="fa-stack fa-lg">
