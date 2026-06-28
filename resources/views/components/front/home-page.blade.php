@@ -1,5 +1,4 @@
 <x-front.layout>
-
     {{--slot Header--}}
     <x-slot name="pageHeader" >
         {{ $newestData->title }}
@@ -13,12 +12,15 @@
     <x-slot name="pageSubHeader" >
         {{ $newestData->description }}
     </x-slot>
+{{--slot header--}}
+
     <!-- Main Content-->
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 @foreach($data as $key => $values)
-                    <x-front.blog-list title="{{ $values->title }}" description=" {{ $values->description }}"
+                    <x-front.blog-list title="{{ $values->title }}"
+                                       description=" {{ $values->description }}"
                                        date="{{ $values->created_at->isoFormat('dddd, D MMMM Y') }}"
                                        user="{{ $values->user->name }}"
                                        link="{{ route('blog.detail', ['slug' => $values->slug]) }}"/>
